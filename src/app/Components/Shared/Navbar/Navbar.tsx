@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 text-white p-4 shadow-md">
+    <nav className="bg-[#1D1B38] text-white p-5 shadow-md fixed w-full -top-1 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <span className="text-xl font-bold cursor-pointer">PUBG Pro</span>
@@ -45,8 +45,9 @@ const Navbar = () => {
         </ul>
       </div>
 
+      {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 h-full w-64 bg-gray-800 p-6 transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 bg-gray-800 p-6 transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
