@@ -23,13 +23,18 @@ const ShowcaseVideos: React.FC = () => {
       </div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 px-5 md:px-6 lg:px-0">
-        <div className="lg:col-span-2 rounded-lg overflow-hidden shadow-lg bg-white">
+        <div className="lg:col-span-2 rounded-lg overflow-hidden shadow-lg">
           <iframe
             className="w-full aspect-video"
             src={`https://www.youtube.com/embed/${videos[0].id}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            style={{
+              clipPath: "polygon(0% 0%, 90% 0%, 100% 10%, 100% 100%, 0% 100%)",
+              background:
+                "linear-gradient(to bottom, rgba(43,23,59,0.6), rgba(21,14,40,0.9))",
+            }}
           ></iframe>
         </div>
 
@@ -38,6 +43,12 @@ const ShowcaseVideos: React.FC = () => {
             <div
               key={video.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
+              style={{
+                clipPath:
+                  "polygon(0% 0%, 90% 0%, 100% 10%, 100% 100%, 0% 100%)",
+                background:
+                  "linear-gradient(to bottom, rgba(43,23,59,0.6), rgba(21,14,40,0.9))",
+              }}
             >
               <iframe
                 className="w-full aspect-video"
@@ -53,16 +64,19 @@ const ShowcaseVideos: React.FC = () => {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 md:px-6 lg:px-0 mt-6">
         {videos.slice(3).map((video) => (
-          <div
-            key={video.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden"
-          >
+          <div key={video.id} className=" rounded-lg shadow-lg overflow-hidden">
             <iframe
               className="w-full aspect-video"
               src={`https://www.youtube.com/embed/${video.id}`}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              style={{
+                clipPath:
+                  "polygon(0% 0%, 90% 0%, 100% 10%, 100% 100%, 0% 100%)",
+                background:
+                  "linear-gradient(to bottom, rgba(43,23,59,0.6), rgba(21,14,40,0.9))",
+              }}
             ></iframe>
           </div>
         ))}

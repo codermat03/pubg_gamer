@@ -4,7 +4,7 @@ import { Facebook, Instagram, X, Youtube, ArrowBigRight } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#502679] to-[#161A51] text-white py-12 px-6 md:px-20">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
         {/* Left Side - Large Navigation */}
         <div className="md:col-span-1">
           <h2 className="text-2xl font-bold leading-relaxed">Services</h2>
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       {/* Contact and Socials */}
-      <div className="mt-12 flex flex-col md:flex-row md:justify-between">
+      <div className="mt-12 flex flex-col md:flex-row md:justify-between text-left">
         <div>
           <h3 className="text-lg font-bold">GET IN TOUCH</h3>
           <p className="text-gray-300">hitboox@example.com</p>
@@ -63,7 +63,7 @@ const Footer = () => {
       </div>
 
       {/* Subscription Section */}
-      <div className="mt-12  p-6 rounded-lg flex items-center space-x-6">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 items-center gap-6 p-6 rounded-lg">
         <img
           src="https://i.postimg.cc/0yjbTJf6/ft-img.png"
           alt="Controller"
@@ -74,18 +74,20 @@ const Footer = () => {
             Sign up today to get the latest inspiration & insights
           </h3>
         </div>
-        <input
-          type="email"
-          placeholder="Your email"
-          className="bg-transparent border border-gray-400 rounded-full px-6 py-2 outline-none text-white w-64"
-        />
-        <ArrowBigRight></ArrowBigRight>
+        <div className="flex items-center space-x-4">
+          <input
+            type="email"
+            placeholder="Your email"
+            className="bg-transparent border border-gray-400 rounded-full px-6 py-2 outline-none text-white w-64"
+          />
+          <ArrowBigRight className="text-white w-8 h-8" />
+        </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-12 flex flex-col md:flex-row md:justify-between text-gray-400 text-sm">
+      <div className="mt-12 flex flex-col md:flex-row md:justify-between text-gray-400 text-sm text-left">
         <p>
-          © 2025 <span className="text-white font-bold">Hitboox.</span> All
+          © 2025 <span className="text-white font-bold">Codermat.</span> All
           Rights Reserved.
         </p>
         <div className="flex space-x-4">
